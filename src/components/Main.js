@@ -7,7 +7,9 @@ function Main({context}) {
     useEffect(() => {
         if(!context.hasData()) {
             fetch("https://localhost:44399/api/users").then(response => response.json()).then(data => {
-                context.setData(data);
+                if(data) {
+                    context.setData(data);
+                }
             })
         }
     }, [context]);
