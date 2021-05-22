@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@200;300;400;500;600;700;800;900&display=swap');
+
+html, body {
+    font-family: 'Spartan', sans-serif !important;
+}
+
+div.pagination {
+    display: flex;
+    align-items: center;
+
+    span {
+        margin: 0px 10px;
+        font-weight: bold;
+        text-decoration: none;
+        cursor: unset;
+    }
+
+    button {
+        padding: 5px;
+        &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        &.disabled {
+            cursor: not-allowed;
+            text-decoration: none;
+            color: lightgray;
+        }
+    }
+}
